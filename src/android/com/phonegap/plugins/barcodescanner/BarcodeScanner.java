@@ -126,7 +126,13 @@ public class BarcodeScanner extends CordovaPlugin {
         }
         return true;
     }
-
+    /**
+     * Close windows
+     */
+    public void hide() {
+        CordovaActivity activity = (CordovaActivity) cordova.getActivity();
+        activity.finish();
+    }
     /**
      * Starts an intent to scan and decode a barcode.
      */
